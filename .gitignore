@@ -3,9 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# ignore db files
+# ignore db files and the data folder
 *.db
-
+Data/
 # C extensions
 *.so
 
