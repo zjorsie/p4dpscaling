@@ -464,7 +464,7 @@ action ingress_flow_migrate_timing_process() {
 }
 
 action clone_switch_time() {
-    clone_i2e(0xff, mirror_fld_list);
+    //clone_i2e(0xff, mirror_fld_list);
 }
 
 action migrate_forward_resubmit() {
