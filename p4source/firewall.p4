@@ -56,9 +56,6 @@ control ingress {
         This sequence does migration things.
         */
         apply(read_mig_sid_table);
-        if((new_metadata.sid == _mig_metadata.migdstsw) || (new_metadata.sid == _mig_metadata.migsrcsw)) {
-            apply(plus_migration_table);
-        }
         if(new_metadata.sid == _mig_metadata.migdstsw) {
             // read the seqID from the register
             apply(read_seqID_from_reg_table);
@@ -68,7 +65,7 @@ control ingress {
             // only import values if the sequence number is not out of date.. 
             // both 0x0f and 0xf0 don't require processing, so just accept the latest packet and do not count the rest
             // TODO kan misschien iets bouwen voor counting states. deze mogen wel wordne meegenomen...
-                if((_mig_metadata.regSeqID < _mig_flow_recv.sequenceID) || (_mig_flow_recv.sequenceID == INITMIGID)) {
+                if((_mig_metadata.regSeqID < _mig_flow_recv.sequenceID) || (_mig_flow_recv.sequenceID == 1)) {
                     // when receiving inital sync packet
                     // or when receiving an update packet..
                     if(_mig_flow_recv.VNFID == VNF_PROXYLESS) {
@@ -90,18 +87,18 @@ control ingress {
 
                     }
                     // send timing to the control plane
-                    if (_mig_flow_recv.sequenceID != INITMIGID) {
+                    if (_mig_flow_recv.sequenceID != 0x01) {
                         //apply(forward_time_info_to_cpu_table);
                     }                    
                 }
                 apply(store_seqID_to_reg_table);
                 // send an initial upgrade to host
-                if (_mig_flow_recv.sequenceID == INITMIGID && _mig_flow_recv.flowhdr != MIG_TO_CONTROL) {
+                if (_mig_flow_recv.sequenceID == 0x00 && _mig_flow_recv.flowhdr != MIG_TO_CONTROL) {
                     // send an ack back to the src sw
                     apply(send_mig_ack_table);
                 
                 }
-                else if (_mig_flow_recv.sequenceID != INITMIGID && _mig_flow_recv.flowhdr != MIG_TO_CONTROL) {
+                else if (_mig_flow_recv.sequenceID != 0x00 && _mig_flow_recv.flowhdr != MIG_TO_CONTROL) {
                     // send timing information to CPU
                     //apply(flow_migrate_timing_process_table);
                 }
@@ -127,7 +124,6 @@ control ingress {
             }
         }
         else {
-            // either the migration source or another forwarding switch.....
             // if it is an migration packet and this switch is the source
             if (new_metadata.sid == _mig_metadata.migsrcsw && standard_metadata.ingress_port == CPU_PORT) {
                 // if this is the first in the sequence:
@@ -161,7 +157,7 @@ control ingress {
                     // change the protocol ID to 0x0f and send to CPU
                     apply(set_mig_protoc_zero_f_table);
                     // append one to the sequenceID:
-                    //apply(plus_seqID_table);
+                    apply(plus_seqID_table);
                 }
                 if (_mig_flow_recv.subProtocol == MIGST_INITFORWARD) {
                     // send a packet back to the control plane to indicate this action has been done.
@@ -272,7 +268,7 @@ control egress {
         }
         apply(clone_pkt_set_hash_table);
         apply(mig_upd_pkt_egress_table);
-        //apply(clone_switch_time_table);
+        apply(clone_switch_time_table);
         if (_mig_flow_recv.VNFID == VNF_PROXYLESS) {
             // add the vnf proxystateless header
             // does nothing as the vnf is stateless.
@@ -306,7 +302,7 @@ control egress {
         }
     }
     // count packet to packet which has left the switch
-    if(valid(_mig_flow_recv) && standard_metadata.egress_spec != CPU_PORT) {
-        //apply(plus_migration_table);
+    if(valid(_mig_flow_recv)) {
+        apply(plus_migration_table);
     }
 }

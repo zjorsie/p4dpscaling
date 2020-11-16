@@ -1,0 +1,1333 @@
+pkg_info {
+  arch: "v1model"
+}
+tables {
+  preamble {
+    id: 33576629
+    name: "_ss_putdown_tbl"
+    alias: "_ss_putdown_tbl"
+  }
+  action_refs {
+    id: 16806975
+  }
+  action_refs {
+    id: 16800567
+    annotations: "@defaultonly"
+    scope: DEFAULT_ONLY
+  }
+  size: 1024
+}
+tables {
+  preamble {
+    id: 33616674
+    name: "apply_packetCounter_stateful_flowID_tbl"
+    alias: "apply_packetCounter_stateful_flowID_tbl"
+  }
+  match_fields {
+    id: 1
+    name: "flowID.flowID"
+    bitwidth: 32
+    match_type: EXACT
+  }
+  action_refs {
+    id: 16839246
+  }
+  action_refs {
+    id: 16831062
+  }
+  action_refs {
+    id: 16800567
+    annotations: "@defaultonly"
+    scope: DEFAULT_ONLY
+  }
+  size: 1024
+}
+tables {
+  preamble {
+    id: 33616437
+    name: "apply_packetCounter_stateful_ss_tbl"
+    alias: "apply_packetCounter_stateful_ss_tbl"
+  }
+  match_fields {
+    id: 1
+    name: "flowID.flowID"
+    bitwidth: 32
+    match_type: EXACT
+  }
+  action_refs {
+    id: 16839246
+  }
+  action_refs {
+    id: 16831062
+  }
+  action_refs {
+    id: 16800567
+    annotations: "@defaultonly"
+    scope: DEFAULT_ONLY
+  }
+  size: 1024
+}
+tables {
+  preamble {
+    id: 33569599
+    name: "apply_packetCounter_stateful_tbl"
+    alias: "apply_packetCounter_stateful_tbl"
+  }
+  match_fields {
+    id: 1
+    name: "flowID.flowID"
+    bitwidth: 32
+    match_type: EXACT
+  }
+  action_refs {
+    id: 16808846
+  }
+  action_refs {
+    id: 16831062
+  }
+  action_refs {
+    id: 16800567
+    annotations: "@defaultonly"
+    scope: DEFAULT_ONLY
+  }
+  size: 1024
+}
+tables {
+  preamble {
+    id: 33583753
+    name: "calc_net_hash_mig_table"
+    alias: "calc_net_hash_mig_table"
+  }
+  action_refs {
+    id: 16796291
+  }
+  action_refs {
+    id: 16800567
+    annotations: "@defaultonly"
+    scope: DEFAULT_ONLY
+  }
+  size: 1024
+}
+tables {
+  preamble {
+    id: 33616880
+    name: "calc_net_hash_normal_table"
+    alias: "calc_net_hash_normal_table"
+  }
+  action_refs {
+    id: 16815915
+  }
+  action_refs {
+    id: 16800567
+    annotations: "@defaultonly"
+    scope: DEFAULT_ONLY
+  }
+  size: 1024
+}
+tables {
+  preamble {
+    id: 33586247
+    name: "clone_pass_update_table"
+    alias: "clone_pass_update_table"
+  }
+  action_refs {
+    id: 16834848
+  }
+  action_refs {
+    id: 16800567
+    annotations: "@defaultonly"
+    scope: DEFAULT_ONLY
+  }
+  size: 1024
+}
+tables {
+  preamble {
+    id: 33596585
+    name: "clone_ss_tbl"
+    alias: "clone_ss_tbl"
+  }
+  action_refs {
+    id: 16840821
+  }
+  action_refs {
+    id: 16800567
+    annotations: "@defaultonly"
+    scope: DEFAULT_ONLY
+  }
+  size: 1024
+}
+tables {
+  preamble {
+    id: 33601754
+    name: "disc_pkt_to_cpu_no_timing_tbl"
+    alias: "disc_pkt_to_cpu_no_timing_tbl"
+  }
+  action_refs {
+    id: 16819683
+  }
+  action_refs {
+    id: 16800567
+    annotations: "@defaultonly"
+    scope: DEFAULT_ONLY
+  }
+  size: 1024
+}
+tables {
+  preamble {
+    id: 33579304
+    name: "disc_pkt_to_cpu_tbl"
+    alias: "disc_pkt_to_cpu_tbl"
+  }
+  action_refs {
+    id: 16788808
+  }
+  action_refs {
+    id: 16800567
+    annotations: "@defaultonly"
+    scope: DEFAULT_ONLY
+  }
+  size: 1024
+}
+tables {
+  preamble {
+    id: 33597958
+    name: "drop_tbl2"
+    alias: "drop_tbl2"
+  }
+  action_refs {
+    id: 16784184
+  }
+  action_refs {
+    id: 16800567
+    annotations: "@defaultonly"
+    scope: DEFAULT_ONLY
+  }
+  size: 1024
+}
+tables {
+  preamble {
+    id: 33572125
+    name: "forward_mig_pkt_set_sessid_tbl"
+    alias: "forward_mig_pkt_set_sessid_tbl"
+  }
+  action_refs {
+    id: 16792864
+  }
+  action_refs {
+    id: 16831062
+  }
+  action_refs {
+    id: 16800567
+    annotations: "@defaultonly"
+    scope: DEFAULT_ONLY
+  }
+  size: 1024
+}
+tables {
+  preamble {
+    id: 33605694
+    name: "forward_mig_pkt_tbl"
+    alias: "forward_mig_pkt_tbl"
+  }
+  match_fields {
+    id: 1
+    name: "_mig_flow_recv.migSessionID"
+    bitwidth: 8
+    match_type: EXACT
+  }
+  action_refs {
+    id: 16822542
+  }
+  action_refs {
+    id: 16831062
+  }
+  action_refs {
+    id: 16800567
+    annotations: "@defaultonly"
+    scope: DEFAULT_ONLY
+  }
+  size: 1024
+}
+tables {
+  preamble {
+    id: 33567137
+    name: "forward_ss_tbl"
+    alias: "forward_ss_tbl"
+  }
+  action_refs {
+    id: 16785593
+  }
+  action_refs {
+    id: 16800567
+    annotations: "@defaultonly"
+    scope: DEFAULT_ONLY
+  }
+  size: 1024
+}
+tables {
+  preamble {
+    id: 33611150
+    name: "handle_discovery_packet_table"
+    alias: "handle_discovery_packet_table"
+  }
+  action_refs {
+    id: 16792260
+  }
+  action_refs {
+    id: 16800567
+    annotations: "@defaultonly"
+    scope: DEFAULT_ONLY
+  }
+  size: 1024
+}
+tables {
+  preamble {
+    id: 33617067
+    name: "plus_migration_table"
+    alias: "plus_migration_table"
+  }
+  action_refs {
+    id: 16808642
+  }
+  action_refs {
+    id: 16800567
+    annotations: "@defaultonly"
+    scope: DEFAULT_ONLY
+  }
+  size: 1024
+}
+tables {
+  preamble {
+    id: 33566674
+    name: "plus_migration_table_ingress"
+    alias: "plus_migration_table_ingress"
+  }
+  action_refs {
+    id: 16808642
+  }
+  action_refs {
+    id: 16800567
+    annotations: "@defaultonly"
+    scope: DEFAULT_ONLY
+  }
+  size: 1024
+}
+tables {
+  preamble {
+    id: 33555948
+    name: "plus_total_table"
+    alias: "plus_total_table"
+  }
+  action_refs {
+    id: 16787599
+  }
+  action_refs {
+    id: 16800567
+    annotations: "@defaultonly"
+    scope: DEFAULT_ONLY
+  }
+  size: 1024
+}
+tables {
+  preamble {
+    id: 33592335
+    name: "readPacketStats_table"
+    alias: "readPacketStats_table"
+  }
+  match_fields {
+    id: 1
+    name: "flowID.flowID"
+    bitwidth: 32
+    match_type: EXACT
+  }
+  action_refs {
+    id: 16835670
+  }
+  action_refs {
+    id: 16800567
+    annotations: "@defaultonly"
+    scope: DEFAULT_ONLY
+  }
+  size: 1024
+}
+tables {
+  preamble {
+    id: 33603212
+    name: "read_digest_send_tbl"
+    alias: "read_digest_send_tbl"
+  }
+  action_refs {
+    id: 16791758
+  }
+  action_refs {
+    id: 16800567
+    annotations: "@defaultonly"
+    scope: DEFAULT_ONLY
+  }
+  size: 1024
+}
+tables {
+  preamble {
+    id: 33581877
+    name: "read_sid_table"
+    alias: "read_sid_table"
+  }
+  action_refs {
+    id: 16831062
+  }
+  action_refs {
+    id: 16791750
+  }
+  action_refs {
+    id: 16800567
+    annotations: "@defaultonly"
+    scope: DEFAULT_ONLY
+  }
+  size: 1024
+}
+tables {
+  preamble {
+    id: 33574376
+    name: "read_ss_state2_tbl"
+    alias: "read_ss_state2_tbl"
+  }
+  action_refs {
+    id: 16798117
+  }
+  action_refs {
+    id: 16800567
+    annotations: "@defaultonly"
+    scope: DEFAULT_ONLY
+  }
+  size: 1024
+}
+tables {
+  preamble {
+    id: 33610335
+    name: "read_ss_state_tbl"
+    alias: "read_ss_state_tbl"
+  }
+  action_refs {
+    id: 16798117
+  }
+  action_refs {
+    id: 16800567
+    annotations: "@defaultonly"
+    scope: DEFAULT_ONLY
+  }
+  size: 1024
+}
+tables {
+  preamble {
+    id: 33554963
+    name: "recalculate_flowID_hash_after_set_flowID_tbl"
+    alias: "recalculate_flowID_hash_after_set_flowID_tbl"
+  }
+  action_refs {
+    id: 16839134
+  }
+  action_refs {
+    id: 16800567
+    annotations: "@defaultonly"
+    scope: DEFAULT_ONLY
+  }
+  size: 1024
+}
+tables {
+  preamble {
+    id: 33585156
+    name: "remove_flowID_tbl"
+    alias: "remove_flowID_tbl"
+  }
+  match_fields {
+    id: 1
+    name: "flowID.flowID"
+    bitwidth: 32
+    match_type: EXACT
+  }
+  action_refs {
+    id: 16831062
+  }
+  action_refs {
+    id: 16801636
+  }
+  action_refs {
+    id: 16800567
+    annotations: "@defaultonly"
+    scope: DEFAULT_ONLY
+  }
+  size: 1024
+}
+tables {
+  preamble {
+    id: 33605369
+    name: "route_flowID_tbl"
+    alias: "route_flowID_tbl"
+  }
+  match_fields {
+    id: 1
+    name: "flowID.flowID"
+    bitwidth: 32
+    match_type: EXACT
+  }
+  action_refs {
+    id: 16829080
+  }
+  action_refs {
+    id: 16783387
+  }
+  action_refs {
+    id: 16800567
+    annotations: "@defaultonly"
+    scope: DEFAULT_ONLY
+  }
+  size: 1024
+}
+tables {
+  preamble {
+    id: 33608939
+    name: "route_mig_forward_flowID"
+    alias: "route_mig_forward_flowID"
+  }
+  match_fields {
+    id: 1
+    name: "_mig_flow_recv.flowID"
+    bitwidth: 32
+    match_type: EXACT
+  }
+  action_refs {
+    id: 16783387
+  }
+  action_refs {
+    id: 16800567
+    annotations: "@defaultonly"
+    scope: DEFAULT_ONLY
+  }
+  size: 1024
+}
+tables {
+  preamble {
+    id: 33577182
+    name: "sendPacketUpdate_table"
+    alias: "sendPacketUpdate_table"
+  }
+  action_refs {
+    id: 16823686
+  }
+  action_refs {
+    id: 16800567
+    annotations: "@defaultonly"
+    scope: DEFAULT_ONLY
+  }
+  size: 1024
+}
+tables {
+  preamble {
+    id: 33613269
+    name: "send_digest_tbl"
+    alias: "send_digest_tbl"
+  }
+  action_refs {
+    id: 16839827
+  }
+  action_refs {
+    id: 16800567
+    annotations: "@defaultonly"
+    scope: DEFAULT_ONLY
+  }
+  size: 1024
+}
+tables {
+  preamble {
+    id: 33593746
+    name: "send_ss_mirror_to_cpu_tbl"
+    alias: "send_ss_mirror_to_cpu_tbl"
+  }
+  action_refs {
+    id: 16831403
+  }
+  action_refs {
+    id: 16800567
+    annotations: "@defaultonly"
+    scope: DEFAULT_ONLY
+  }
+  size: 1024
+}
+tables {
+  preamble {
+    id: 33606826
+    name: "send_ss_to_cpu_tbl"
+    alias: "send_ss_to_cpu_tbl"
+  }
+  action_refs {
+    id: 16810980
+  }
+  action_refs {
+    id: 16800567
+    annotations: "@defaultonly"
+    scope: DEFAULT_ONLY
+  }
+  size: 1024
+}
+tables {
+  preamble {
+    id: 33596315
+    name: "send_to_cpu_tbl"
+    alias: "send_to_cpu_tbl"
+  }
+  action_refs {
+    id: 16829080
+  }
+  action_refs {
+    id: 16800567
+    annotations: "@defaultonly"
+    scope: DEFAULT_ONLY
+  }
+  size: 1024
+}
+tables {
+  preamble {
+    id: 33608933
+    name: "set_flowID_tbl"
+    alias: "set_flowID_tbl"
+  }
+  match_fields {
+    id: 1
+    name: "ipv4.srcAddr"
+    bitwidth: 32
+    match_type: EXACT
+  }
+  match_fields {
+    id: 2
+    name: "ipv4.dstAddr"
+    bitwidth: 32
+    match_type: EXACT
+  }
+  match_fields {
+    id: 3
+    name: "ipv4.protocol"
+    bitwidth: 8
+    match_type: EXACT
+  }
+  match_fields {
+    id: 4
+    name: "port_metadata.srcPort"
+    bitwidth: 16
+    match_type: EXACT
+  }
+  match_fields {
+    id: 5
+    name: "port_metadata.dstPort"
+    bitwidth: 16
+    match_type: EXACT
+  }
+  action_refs {
+    id: 16831062
+  }
+  action_refs {
+    id: 16781700
+  }
+  action_refs {
+    id: 16800567
+    annotations: "@defaultonly"
+    scope: DEFAULT_ONLY
+  }
+  size: 1024
+}
+tables {
+  preamble {
+    id: 33570958
+    name: "set_new_state_tbl"
+    alias: "set_new_state_tbl"
+  }
+  action_refs {
+    id: 16802109
+  }
+  action_refs {
+    id: 16800567
+    annotations: "@defaultonly"
+    scope: DEFAULT_ONLY
+  }
+  size: 1024
+}
+tables {
+  preamble {
+    id: 33618593
+    name: "set_port_metadata_rest_tbl"
+    alias: "set_port_metadata_rest_tbl"
+  }
+  action_refs {
+    id: 16790967
+  }
+  action_refs {
+    id: 16800567
+    annotations: "@defaultonly"
+    scope: DEFAULT_ONLY
+  }
+  size: 1024
+}
+tables {
+  preamble {
+    id: 33579856
+    name: "set_port_metadata_tcp_tbl"
+    alias: "set_port_metadata_tcp_tbl"
+  }
+  action_refs {
+    id: 16837504
+  }
+  action_refs {
+    id: 16800567
+    annotations: "@defaultonly"
+    scope: DEFAULT_ONLY
+  }
+  size: 1024
+}
+tables {
+  preamble {
+    id: 33559276
+    name: "set_port_metadata_udp_tbl"
+    alias: "set_port_metadata_udp_tbl"
+  }
+  action_refs {
+    id: 16807821
+  }
+  action_refs {
+    id: 16800567
+    annotations: "@defaultonly"
+    scope: DEFAULT_ONLY
+  }
+  size: 1024
+}
+tables {
+  preamble {
+    id: 33556851
+    name: "strip_mig_headers_table"
+    alias: "strip_mig_headers_table"
+  }
+  action_refs {
+    id: 16807731
+  }
+  action_refs {
+    id: 16800567
+    annotations: "@defaultonly"
+    scope: DEFAULT_ONLY
+  }
+  size: 1024
+}
+tables {
+  preamble {
+    id: 33586607
+    name: "monitor_read_data_tbl"
+    alias: "monitor_read_data_tbl"
+  }
+  action_refs {
+    id: 16830005
+  }
+  action_refs {
+    id: 16800567
+    annotations: "@defaultonly"
+    scope: DEFAULT_ONLY
+  }
+  size: 1024
+}
+tables {
+  preamble {
+    id: 33559691
+    name: "ss_append_header_tbl"
+    alias: "ss_append_header_tbl"
+  }
+  action_refs {
+    id: 16782768
+  }
+  action_refs {
+    id: 16800567
+    annotations: "@defaultonly"
+    scope: DEFAULT_ONLY
+  }
+  size: 1024
+}
+tables {
+  preamble {
+    id: 33600229
+    name: "store_digest_tbl"
+    alias: "store_digest_tbl"
+  }
+  action_refs {
+    id: 16812183
+  }
+  action_refs {
+    id: 16800567
+    annotations: "@defaultonly"
+    scope: DEFAULT_ONLY
+  }
+  size: 1024
+}
+actions {
+  preamble {
+    id: 16800567
+    name: "NoAction"
+    alias: "NoAction"
+  }
+}
+actions {
+  preamble {
+    id: 16806975
+    name: "_ss_putdown"
+    alias: "_ss_putdown"
+  }
+}
+actions {
+  preamble {
+    id: 16839246
+    name: "apply_packetCounter_stateful_flowID"
+    alias: "apply_packetCounter_stateful_flowID"
+  }
+}
+actions {
+  preamble {
+    id: 16831062
+    name: "_nop"
+    alias: "_nop"
+  }
+}
+actions {
+  preamble {
+    id: 16808846
+    name: "apply_packetCounter_stateful"
+    alias: "apply_packetCounter_stateful"
+  }
+}
+actions {
+  preamble {
+    id: 16796291
+    name: "calc_net_hash_mig"
+    alias: "calc_net_hash_mig"
+  }
+}
+actions {
+  preamble {
+    id: 16815915
+    name: "calc_net_hash_normal"
+    alias: "calc_net_hash_normal"
+  }
+}
+actions {
+  preamble {
+    id: 16834848
+    name: "clone_pass_update"
+    alias: "clone_pass_update"
+  }
+}
+actions {
+  preamble {
+    id: 16840821
+    name: "clone_ss"
+    alias: "clone_ss"
+  }
+}
+actions {
+  preamble {
+    id: 16819683
+    name: "disc_pkt_to_cpu_no_timing"
+    alias: "disc_pkt_to_cpu_no_timing"
+  }
+}
+actions {
+  preamble {
+    id: 16788808
+    name: "disc_pkt_to_cpu"
+    alias: "disc_pkt_to_cpu"
+  }
+}
+actions {
+  preamble {
+    id: 16784184
+    name: "_drop"
+    alias: "_drop"
+  }
+}
+actions {
+  preamble {
+    id: 16792864
+    name: "forward_mig_pkt_set_sessid"
+    alias: "forward_mig_pkt_set_sessid"
+  }
+}
+actions {
+  preamble {
+    id: 16822542
+    name: "forward_mig_pkt"
+    alias: "forward_mig_pkt"
+  }
+  params {
+    id: 1
+    name: "flowid"
+    bitwidth: 32
+  }
+}
+actions {
+  preamble {
+    id: 16785593
+    name: "forward_ss"
+    alias: "forward_ss"
+  }
+}
+actions {
+  preamble {
+    id: 16792260
+    name: "handle_discovery_packet"
+    alias: "handle_discovery_packet"
+  }
+}
+actions {
+  preamble {
+    id: 16808642
+    name: "plus_migration"
+    alias: "plus_migration"
+  }
+}
+actions {
+  preamble {
+    id: 16787599
+    name: "plus_total"
+    alias: "plus_total"
+  }
+}
+actions {
+  preamble {
+    id: 16835670
+    name: "readPacketStats"
+    alias: "readPacketStats"
+  }
+  params {
+    id: 1
+    name: "THRESHOLD"
+    bitwidth: 32
+  }
+}
+actions {
+  preamble {
+    id: 16791758
+    name: "read_digest_send"
+    alias: "read_digest_send"
+  }
+}
+actions {
+  preamble {
+    id: 16791750
+    name: "read_sid"
+    alias: "read_sid"
+  }
+  params {
+    id: 1
+    name: "sid"
+    bitwidth: 8
+  }
+}
+actions {
+  preamble {
+    id: 16798117
+    name: "read_ss_state"
+    alias: "read_ss_state"
+  }
+}
+actions {
+  preamble {
+    id: 16839134
+    name: "recalculate_flowID_hash_after_set_flowID"
+    alias: "recalculate_flowID_hash_after_set_flowID"
+  }
+}
+actions {
+  preamble {
+    id: 16801636
+    name: "remove_flowID"
+    alias: "remove_flowID"
+  }
+}
+actions {
+  preamble {
+    id: 16829080
+    name: "send_to_cpu"
+    alias: "send_to_cpu"
+  }
+}
+actions {
+  preamble {
+    id: 16783387
+    name: "route_flowID"
+    alias: "route_flowID"
+  }
+  params {
+    id: 1
+    name: "outPort"
+    bitwidth: 9
+  }
+}
+actions {
+  preamble {
+    id: 16823686
+    name: "sendPacketUpdate"
+    alias: "sendPacketUpdate"
+  }
+}
+actions {
+  preamble {
+    id: 16839827
+    name: "send_digest"
+    alias: "send_digest"
+  }
+}
+actions {
+  preamble {
+    id: 16831403
+    name: "send_ss_mirror_to_cpu"
+    alias: "send_ss_mirror_to_cpu"
+  }
+}
+actions {
+  preamble {
+    id: 16810980
+    name: "send_ss_to_cpu"
+    alias: "send_ss_to_cpu"
+  }
+}
+actions {
+  preamble {
+    id: 16781700
+    name: "set_flowID"
+    alias: "set_flowID"
+  }
+  params {
+    id: 1
+    name: "flowid"
+    bitwidth: 32
+  }
+}
+actions {
+  preamble {
+    id: 16802109
+    name: "set_new_state"
+    alias: "set_new_state"
+  }
+}
+actions {
+  preamble {
+    id: 16790967
+    name: "set_port_metadata_rest"
+    alias: "set_port_metadata_rest"
+  }
+}
+actions {
+  preamble {
+    id: 16837504
+    name: "set_port_metadata_tcp"
+    alias: "set_port_metadata_tcp"
+  }
+}
+actions {
+  preamble {
+    id: 16807821
+    name: "set_port_metadata_udp"
+    alias: "set_port_metadata_udp"
+  }
+}
+actions {
+  preamble {
+    id: 16807731
+    name: "strip_mig_headers"
+    alias: "strip_mig_headers"
+  }
+}
+actions {
+  preamble {
+    id: 16830005
+    name: "monitor_read_data"
+    alias: "monitor_read_data"
+  }
+  params {
+    id: 1
+    name: "dequeuedepthlimit"
+    bitwidth: 48
+  }
+  params {
+    id: 2
+    name: "timedelta_max"
+    bitwidth: 48
+  }
+}
+actions {
+  preamble {
+    id: 16782768
+    name: "ss_append_header"
+    alias: "ss_append_header"
+  }
+}
+actions {
+  preamble {
+    id: 16812183
+    name: "store_digest"
+    alias: "store_digest"
+  }
+}
+registers {
+  preamble {
+    id: 369144008
+    name: "reg_packetCounter"
+    alias: "reg_packetCounter"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 32
+      }
+    }
+  }
+  size: 1024
+}
+registers {
+  preamble {
+    id: 369120112
+    name: "usage_info"
+    alias: "usage_info"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 48
+      }
+    }
+  }
+  size: 1024
+}
+registers {
+  preamble {
+    id: 369133507
+    name: "_ss_flowState"
+    alias: "_ss_flowState"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 8
+      }
+    }
+  }
+  size: 1024
+}
+registers {
+  preamble {
+    id: 369128048
+    name: "flowNums"
+    alias: "flowNums"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 32
+      }
+    }
+  }
+  size: 1024
+}
+registers {
+  preamble {
+    id: 369139761
+    name: "flowSession"
+    alias: "flowSession"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 8
+      }
+    }
+  }
+  size: 1024
+}
+registers {
+  preamble {
+    id: 369104922
+    name: "flowTable"
+    alias: "flowTable"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 8
+      }
+    }
+  }
+  size: 1024
+}
+registers {
+  preamble {
+    id: 369148617
+    name: "flowUpdateCounter"
+    alias: "flowUpdateCounter"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 8
+      }
+    }
+  }
+  size: 1024
+}
+registers {
+  preamble {
+    id: 369132939
+    name: "flowVNFID"
+    alias: "flowVNFID"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 8
+      }
+    }
+  }
+  size: 1024
+}
+registers {
+  preamble {
+    id: 369157776
+    name: "packet_stats"
+    alias: "packet_stats"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 32
+      }
+    }
+  }
+  size: 1024
+}
+digests {
+  preamble {
+    id: 385918506
+    name: "pkt_update_digest"
+    alias: "pkt_update_digest"
+  }
+  type_spec {
+    struct {
+      name: "pkt_update_digest"
+    }
+  }
+}
+digests {
+  preamble {
+    id: 385881558
+    name: "digest_field_list"
+    alias: "digest_field_list"
+  }
+  type_spec {
+    struct {
+      name: "digest_field_list"
+    }
+  }
+}
+type_info {
+  structs {
+    key: "digest_field_list"
+    value {
+      members {
+        name: "enq_timestamp"
+        type_spec {
+          bitstring {
+            bit {
+              bitwidth: 48
+            }
+          }
+        }
+      }
+      members {
+        name: "enq_qdepth"
+        type_spec {
+          bitstring {
+            bit {
+              bitwidth: 48
+            }
+          }
+        }
+      }
+      members {
+        name: "deq_qdepth"
+        type_spec {
+          bitstring {
+            bit {
+              bitwidth: 48
+            }
+          }
+        }
+      }
+      members {
+        name: "deq_timedelta"
+        type_spec {
+          bitstring {
+            bit {
+              bitwidth: 48
+            }
+          }
+        }
+      }
+      members {
+        name: "monitorts"
+        type_spec {
+          bitstring {
+            bit {
+              bitwidth: 48
+            }
+          }
+        }
+      }
+    }
+  }
+  structs {
+    key: "pkt_update_digest"
+    value {
+      members {
+        name: "threshold"
+        type_spec {
+          bitstring {
+            bit {
+              bitwidth: 32
+            }
+          }
+        }
+      }
+      members {
+        name: "numPackets"
+        type_spec {
+          bitstring {
+            bit {
+              bitwidth: 32
+            }
+          }
+        }
+      }
+      members {
+        name: "timestamp"
+        type_spec {
+          bitstring {
+            bit {
+              bitwidth: 48
+            }
+          }
+        }
+      }
+      members {
+        name: "flowID"
+        type_spec {
+          bitstring {
+            bit {
+              bitwidth: 32
+            }
+          }
+        }
+      }
+    }
+  }
+}
